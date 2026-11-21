@@ -3,9 +3,8 @@
 Reproducible, dependency-free Python 3.9+ environment for the Genesis FINTech case.
 
 ```bash
-cd fin_audit_hackathon
-python3 -m unittest discover -s tests -v
-python3 demo.py
+cd /Users/admin/Desktop/fin_audit_hackathon
+python3 verify.py
 ```
 
 `FinancialAuditEnv.reset(seed, config)` returns public task metadata only.  The
@@ -45,3 +44,15 @@ one-to-one; repeated or unsupported findings are false positives. F1 is
 
 `demo.py` runs a small deterministic scripted policy and writes a public-only
 trajectory to `trajectories.jsonl`.
+
+## Submission files
+
+- `LICENSE` - MIT license.
+- `requirements.txt` - fixed dependency statement (standard library only).
+- `episodes/train` and `episodes/dev` - 10 public episodes each.
+- `policies.py` - four baseline-policy adapters.
+- `DESIGN.md` - short design note.
+- `tests/`, `trajectories.jsonl`, and `demo.py` - verification and demo.
+
+Record the requested demo video by running `python3 verify.py`, then using
+macOS `Shift-Command-5` to record the terminal while it reports success.
